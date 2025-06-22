@@ -1,11 +1,11 @@
 
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 import java.util.Stack;
 
-// LinkedList의 모든 요소를 출력하는 메서드
 
 public class Main {
 
