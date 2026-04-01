@@ -1,7 +1,7 @@
 
-
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main{
 	public static void main(String[] args) throws IOException{
@@ -84,22 +84,28 @@ public class Main{
 			int l = Integer.parseInt(quest[1]);
 			int r = Integer.parseInt(quest[2]);
 			
-			for(int k = 0 ; k < 26; k++) {
+			// quest[0].charAt(0) -'a' : 받은 알파벳 - 'a' = 결과값 숫자로 반환됨
+			// 즉 받은 문자가 c 라면 
+			// 'c' - 'a' = 2 
+			// 즉 해당 문자 c에 대한 인덱스를 반환하게 됨.
+			int alpha = quest[0].charAt(0) - 'a';
+			
+			
 				// (char)(k+'a') : k번째 알파벳을 문자로 만드는 것
 				// 'a' = 97 이므로
 				// k 가 2면
 				// k + 'a' = 99
 				//따라서 (char)(k+'a') = 'c' 가 된다.
 				//즉, 26개의 알파벳을 순회하면서 받은 알파벳이 몇번째 알파벳인지 확인하는 과정
-				if(quest[0].charAt(0) == (char)(k + 'a')) {
+			
 					if(l > 0) {
-					count = wordCount[k][r] - wordCount[k][l-1];
+					count = wordCount[alpha][r] - wordCount[alpha][l-1];
 					}
 					else {
-						count = wordCount[k][r];
+						count = wordCount[alpha][r];
 					}
-				}
-			}
+			
+			
 			
 		
 			
