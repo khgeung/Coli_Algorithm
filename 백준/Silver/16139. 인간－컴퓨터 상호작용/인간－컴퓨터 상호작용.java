@@ -1,4 +1,5 @@
 
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -78,6 +79,7 @@ public class Main{
 		
 		
 		//0부터 5까지에 a가 있는지 확인하는 로직
+		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < q ; i++) {
 			int count = 0;
 			String [] quest = br.readLine().split(" ");
@@ -106,13 +108,10 @@ public class Main{
 					}
 			
 			
-			
-		
-			
-			System.out.println(count);
-			
-			
+			sb.append(count).append("\n");
+
 		}
+		System.out.println(sb);
 		
 	}
 }
